@@ -4,11 +4,6 @@
     "username": "vinagunawan",
     "password": "denpasaR912",
     "database": "group22",
-=======
-    "username": "root",
-    "password": null,
-    "database": "group-22",
->>>>>>> 87101e066ee0688ea69483553c9d778340850892
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
