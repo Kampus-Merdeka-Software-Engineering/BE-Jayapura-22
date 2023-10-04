@@ -5,10 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "start": "node index",
     "dev": "nodemon index"
   },
   "author": "",
+=======
+    "start": "nodemon index"
+  },
+  "author": "grup22",
+>>>>>>> 87101e066ee0688ea69483553c9d778340850892
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
