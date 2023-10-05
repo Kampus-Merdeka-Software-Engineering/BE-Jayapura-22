@@ -32,6 +32,7 @@ app.get("/tracking-shipping/:trackingNumber", async (req,res) => {
         })
     }
     catch (error) {
+        console.log(error)
         return res.status(500).send({
             message: "Data gagal ditampilkan"
         });
@@ -60,6 +61,7 @@ app.post("/input-data-tracking", async(req, res) => {
        }) 
     } 
     catch (error) {
+        console.log(error)
         return res.status(500).send({
             message: "Data gagal disimpan",
         });
