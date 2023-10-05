@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("./tracking-shipping/:trackingNumber", async (req,res) => {
+app.get("/tracking-shipping/:trackingNumber", async (req,res) => {
     try{
         const trackingNumber = req.params.trackingNumber
         const result = await dataTracking.findOne ({
@@ -55,7 +55,6 @@ app.post("/input-data-tracking", async(req, res) => {
        }) 
     } 
     catch (error) {
-        console.log(error)
         return res.status(500).send({
             message: "Data gagal disimpan",
         });
@@ -63,5 +62,5 @@ app.post("/input-data-tracking", async(req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log('Server running on localhost: $(PORT)');
+    console.log(`Server running on localhost: ${PORT}`);
 })
