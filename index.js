@@ -47,17 +47,19 @@ app.post("/input-data-tracking", async(req, res) => {
         const nomorHP = body.nomorHP
         const destination = body.destination
         const weight = body.weight
+        const trackingNumber = new Date().getTime()
         await dataTracking.create({
             nama: nama,
             namaBarang: namaBarang,
             nomorHP: nomorHP,
             destination: destination,
             weight: weight,
-            trackingNumber: new Date() .getTime()
+            trackingNumber: trackingNumber
         })
        return res.send({
         message: "Data berhasil disimpan",
         status: 200,
+        trackingNumber
        }) 
     } 
     catch (error) {
