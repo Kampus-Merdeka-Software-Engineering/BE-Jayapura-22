@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT||3000;
 const bodyParser = require('body-parser');
-const {dataTracking} = require("./models/dataTracking");
+const {dataTracking} = require("./models");
 const cors = require("cors");
 
 
