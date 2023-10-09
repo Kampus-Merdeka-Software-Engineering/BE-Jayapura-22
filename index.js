@@ -110,13 +110,13 @@ app.post("/login", async (req,res) => {
     }
 
     try{
-        const user = await user.findOne({
+        const dataUser = await user.findOne({
             where: {
                 email: body.email,
             },
         });
-        if (user) {
-            const passwordMatch = await bcrypt.compare(body.password, user.password);
+        if (dataUser) {
+            const passwordMatch = await bcrypt.compare(body.password, dataUser.password);
             if (passwordMatch) {
                 return res.send({
                     message: "Success login",
