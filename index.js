@@ -63,7 +63,7 @@ app.post("/input-data-tracking", async(req, res) => {
        }) 
     } 
     catch (error) {
-        console.log(error)
+        console.log(error);
         return res.status(500).send({
             message: "Data gagal disimpan",
         });
@@ -93,7 +93,7 @@ app.post("/register", async(req, res) => {
        }) 
     }
     catch (error) {
-        console.log(error)
+        console.log(error);
         return res.status(500).send({
             message: "Failed to create account",
         });
